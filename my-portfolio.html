@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vasanthkumar protfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" 
+    integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;   
+    font-family: 'Montserrat', sans-serif;
+    text-transform: capitalize;
+    transition: all 0.5s linear;
+}
+    #background{
+    
+    width: 100%;
+    background-image: linear-gradient(rgb(255 255 255/70%),rgb(255 246 248/70%)),
+    url(https://raw.githubusercontent.com/Qurat-ul-A/web-portfolio/837cb69a46e79ca485c95cd517faa7537fd9a150/img/bg.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position:relative;
+}
+#navbar ul li{
+    position: relative;
+    list-style: none;
+    display: inline-block;
+    padding: 2% 2%;
+    font-weight: bold;
+    font-size: 18px;
+}
+    
+
+#h1{
+    font-size: 2em;
+    color: rgb(108, 1, 37);
+}
+#navbar ul li a{
+    text-decoration: none;
+    color: blueviolet;
+}
+#navbar ul li::after{
+    content: '';
+    height: 2px;
+    width: 0;
+    display: block;
+    background-color: palevioletred;
+    transition: 0.5s;
+    margin: auto;
+}
+#navbar ul li:hover::after{
+    width: 100%;
+}
+#box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+#text-box{
+    width: 37%;
+    color: palevioletred;
+}
+#text-box h1{
+    padding: 10px 0;
+    font-size: 60px;
+}
+#text-box h1 span{
+    color: blueviolet;
+}
+#btn{
+    background-color: blueviolet;
+    color: #fff;
+    border: 2px solid blueviolet;
+    padding: 13px 31px;
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+}
+#btn:hover{
+    background-color: palevioletred;
+    border: 2px solid palevioletred;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+.text-box{
+    width: 37%;
+    color: palevioletred;
+}
+.text-box h1{
+    padding: 10px 0;
+    font-size: 60px;
+}
+.text-box h1 span{
+    color: blueviolet;
+}
+.btn{
+    background-color: blueviolet;
+    color: #fff;
+    border: 2px solid blueviolet;
+    padding: 13px 31px;
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+}
+.btn:hover{
+    background-color: palevioletred;
+    border: 2px solid palevioletred;
+    color: #444;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+.links{
+    margin-top: 10%;
+}
+.links i{
+    padding: 7px;
+    color: #444;
+    font-size: 1.7em;
+    border-radius: 50%;
+    margin-right: 9%;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16),
+    0 3px 6px rgba(0,0,0,0.23);
+}
+.links i:hover{
+    color: #fff;
+    background-color: palevioletred;
+    cursor: pointer;
+}
+.img{
+    width: 45%;
+}
+.img img{
+    width: 100%;
+    height: 480px;
+
+}
+#progress{
+      border: 1px solid rgb(24, 12, 12);
+      width: 70%;
+      height:200px;
+      background-color:rgb(211, 210, 207);
+      padding-top: 3%;
+      border-radius: 9px;
+    }
+    #p{padding-left: 2%;
+    }
+    .image-container {
+    position: relative;
+    width: 500px;
+    height: 500px;
+  }
+  
+  .image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+
+/* _____animation */
+.fade-up{
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeIn 1s ease-in-out forwards;
+}
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@media only screen and (max-width:1020px){
+    .text-box h1{
+        font-size: 40px;
+    }
+    .img img{
+        height: 400px;
+    }
+}
+@media only screen and (max-width:800px){
+.box{
+    flex-direction: column-reverse;
+}
+.img , .text-box{
+    width: 80%;
+}
+.img img{
+    height: 300px;
+}
+.navbar ul li{
+    display: block;
+    padding: 2px 0px 34px;
+}
+.navbar ul li a{
+    color: #fff;
+}
+.navbar-items{
+    position: absolute;
+    background-color: rgb(199, 168, 178);
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    right: 0;
+    text-align: left;
+    z-index: 2;
+    transition: all 1s ease-in;
+   
+}
+.navbar-items ul{
+    padding: 98px 51px 8px 49px;
+   
+}
+.burger{
+    display: block;
+    z-index: 3;
+    position: absolute;
+    top: 15px;
+    right: 5%;
+    cursor: pointer;
+    font-size: 33px;
+    color: rgb(12, 4, 102);
+}
+.h-class{
+    height: 100vh;
+    opacity: 0;
+}
+.v-class{
+    opacity: 0;
+}
+}
+/*----cards---*/
+#container {
+   
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+   
+  }
+  
+  #container .card {
+    position: relative;
+    border: none;
+    cursor: pointer;
+   background-image:linear-gradient(rgb(255 255 255/70%),rgb(255 246 248/70%)), url(https://www.teahub.io/photos/full/21-216495_wallpaper-gradient-purple-blue-linear-dark-violet-dark.jpg);
+    width: 300px;
+    
+  }
+  
+  #container .card .face {
+    width: 300px;
+    height: 200px;
+    transition: 0.5s;
+  }
+  
+  #container .card .face.face1{
+    position: relative;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+  }
+  
+  #container .card:hover .face.face1{
+    background: #ff0057;
+    transform: translateY(0);
+  } 
+  
+  #container .card .face.face1 .content {
+    opacity: 0.2;
+    transition: 0.5;
+  }
+  
+  #container .card:hover .face.face1 .content{
+    opacity: 1;
+  }
+  
+  #container .card .face.face1 .content img {
+    max-width: 100px;
+  }
+  
+  #container .card .face.face1 .content h3 {
+    margin: 10px 0 0 ;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5em; 
+  }
+  
+  #container .card .face.face2{
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.9);
+    transform: translateY(-100px);
+  } 
+  
+  #container .card:hover .face.face2 {
+    transform: translateY(0);
+  } 
+  
+  #container .card .face.face2 .content p{
+    margin: 0;
+    padding: 0;
+  }
+  
+  #container .card .face.face2 .content a{
+    margin:15px 0 0;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color: #333;
+    padding: 5px;
+    border: 1px solid #333; 
+  } 
+  
+  #container .card .face.face2 .content a:hover{
+    background: #333;
+    color: #fff;
+  }
+#bg{
+  background-image: linear-gradient(rgb(255 255 255/70%),rgb(255 246 248/70%)),
+   url(https://www.teahub.io/photos/full/21-216495_wallpaper-gradient-purple-blue-linear-dark-violet-dark.jpg);
+
+}
+/*forms-----*/
+#f-bg{
+  background-image: linear-gradient(rgb(255 255 255/70%),rgb(255 246 248/70%)),
+   url(https://www.teahub.io/photos/full/21-216495_wallpaper-gradient-purple-blue-linear-dark-violet-dark.jpg);
+
+}
+.form-box {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  
+  border-radius: 9px;
+  margin-top: 3%;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  box-shadow:8px 10px 5px rgb(68, 67, 67);
+  border-radius: 9px;
+}
+
+button {
+  display: block;
+  width: px;
+  padding: 5px;
+  border-radius: 60px;
+  background-color: #f80597;
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow:8px 3px 5px rgb(16, 8, 8);
+}
+button:hover{
+  transform: matrix(3deg);
+  transition: left 7s;
+
+}
+.page-container {
+  padding: 20px;
+}
+
+
+/* Footer styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-media .icon {
+  color: #fff;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+  }
+  
+  .social-media {
+    margin-bottom: 10px;
+  }
+}
+
+    </style>
+</head>
+<body>
+    <div class="containar"id="background">
+        <br>
+        <br>    
+        <nav class="navbar navbar-dark navbar-expand-sm  fixed-top" >
+            <div class="container-fluid">
+              <a class="navbar-brand text-dark" href="#">
+                </a>
+              <button class="navbar-toggler  bg-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon text-dark"></span>
+              </button>
+              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title " id="offcanvasDarkNavbarLabel">Deatlies</h5>
+                  <button type="button" class="btn-close btn-close-dark" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body-sm" id="navbar">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 ">
+                    <li class="nav-item">
+                      <a class="nav-link active " aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active " aria-current="page" href="#">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">COURSE</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">CONTECT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">BLOG</a>
+                    </li>                   
+                  </ul>                 
+                </div>
+              </div>
+            </div>
+          </nav>
+          <div class="box">
+            <div class="text-box fade-up">
+                <h1>hi, <br>i'm vasanthkumar <br><span>web developer</span></h1>
+                <a href="vasanthkumar.pdf" class="btn" download>download CV</a>
+                <div class="links">
+                  <a href="http://facebook.com/balaga.vasanthkumar">
+              
+                    <i class="fab fa-facebook"></i></a>
+                    <a href="http://instagram.com/heart_hacker___vasanthkumar">
+                    <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="http://twitter.com/vasanthkumar">
+                      <i class="fab fa-twitter">
+                      </i>
+                    </a>
+                </div>
+            </div>
+            <div class="img fade-up">
+                <img src="https://raw.githubusercontent.com/Qurat-ul-A/web-portfolio/837cb69a46e79ca485c95cd517faa7537fd9a150/img/img1.png" alt="">
+            </div>
+        </div>
+         <br>
+        <br>
+        <br>
+    </div>
+    <br>
+    <br>
+    <br>
+  <!----progressbars---->
+  <div id="bg">
+    <br>
+    <br>
+  <div class="container" id="progress">
+            
+            <div id="progress-bar1" style="background-color:aqua; height: 20px; width: 300px; border-radius: 9px ;
+            ">
+            <p id="p">HTML</p></div>
+            <spen>95%</spen>
+
+<script>
+  function progressBarAnimation1() {
+    let width = 0;
+    const step = 1;
+    const time = 100;
+    const element = document.getElementById("progress-bar1");
+    
+    function animate() {
+      width += step;
+      element.style.width = width + "%";
+      if (width < 95) {
+        setTimeout(animate, time);
+      }
+    }
+
+    animate();
+  }
+
+  progressBarAnimation1();
+
+</script>
+<br>
+
+<div id="progress-bar2" style="background-color:rgb(244, 45, 181); height: 20px; width: 0; border-radius:9px">
+<p id="p">CSS</p>
+</div>
+<spen>70%</spen>
+
+<script>
+  function progressBarAnimation2() {
+    let width = 0;
+    const step = 1;
+    const time = 100;  
+    const element = document.getElementById("progress-bar2");
+    
+    function animate() {
+      width += step;
+      element.style.width = width + "%";
+      if (width < 78) {
+        setTimeout(animate, time);
+      }
+    }
+
+    animate();
+  }
+
+  progressBarAnimation2();
+  
+</script>
+<br>
+<div id="progress-bar3" style="background-color:rgb(126, 63, 243); height: 20px; width: 0; border-radius:9px"><p id="p">JAVASCRIPT</p></div>
+<spen>35%</spen>
+
+<script>
+  function progressBarAnimation3() {
+    let width = 0;
+    const step = 1;
+    const time = 100; 
+    const element = document.getElementById("progress-bar3");
+    
+    function animate() {
+      width += step;
+      element.style.width = width + "%";
+      if (width < 35) {
+        setTimeout(animate, time);
+      }
+    }
+
+    animate();
+  }
+
+  progressBarAnimation3();
+</script>
+  <br>    
+</div>
+<br>
+<br>
+<div class="conatainer-fuild text-center Skills">
+ <div class="row">
+  <div class="col">
+    <h4>SKILLS</h4>
+  </div>
+ </div>
+</div>       
+<!----animation cards-->
+<div class="container justify-content-center" id="container">
+  <div class="row col-g">
+      <div class="col-sm">
+  <div class="card">
+    <div class="face face1">
+      <div class="content">
+        <img src="https://cdn-icons-png.flaticon.com/128/11524/11524065.png"width=300px>
+        <h3>DESIGNER</h3>
+      </div>
+    </div>
+    <div class="face face2">
+      <div class="content">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis provident at.</p>
+        <a href="#">Read More</a>
+      </div>
+    </div>
+  </div>
+      </div>
+  <div class="col-sm">
+          <div class="card">
+    <div class="face face1">
+      <div class="content">
+        <img src="https://cdn-icons-png.flaticon.com/128/10061/10061737.png">
+        <h3>DEVELOPER</h3>
+      </div>
+    </div>
+    <div class="face face2">
+      <div class="content">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis provident at.</p>
+        <a href="#">Read More</a>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="col-sm">
+ <div class="card">
+    <div class="face face1">
+      <div class="content">
+        <img src="https://cdn-icons-png.flaticon.com/256/9394/9394546.png">
+        <h3>UX/UI</h3>
+      </div>
+    </div>
+    <div class="face face2">
+      <div class="content">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis provident at.</p>
+        <a href="#">Read More</a>
+      </div>
+    </div>
+    </div>
+  </div>
+  </div>
+</div>
+  </div>
+</div> 
+<br>
+<br>
+<br>
+
+<div id="f-bg">
+<div class="form-box">
+  <img src="https://dreamy-sprite-50544f.netlify.app/static/media/hand.c6aeb5d233e68a69f2ab.png" width="100px" height="100px" style="align-items: center;">
+  <p>Feel free to contact us if you need any assistance, any help or another question.</p>
+  <form action="https://api.web3forms.com/submit" method="POST" id="myForm">
+    <div class="form-group">
+      <input type="hidden" name="access_key" value="8b241ab9-2a9b-4033-abed-fab83f6525d3">
+
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username"placeholder=Name required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Email" required>
+    </div>
+    <div class="form-group">
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" placeholder="Massage" required></textarea>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+</div>
+<script>
+  document.getElementById("myForm").addEventListener("submit", function(e) {
+e.preventDefault(); 
+
+
+var username = document.getElementById("username").value;
+var email = document.getElementById("email").value;
+var message = document.getElementById("message").value;
+
+if (username.trim() === "") {
+alert("Please enter a username.");
+return;
+}
+
+if (email.trim() === "") {
+alert("Please enter an email.");
+return;
+}
+
+if (message.trim() === "") {
+alert("Please enter a message.");
+return;
+}
+
+
+document.getElementById("myForm").submit();
+});
+ </script>
+</div>
+<br>
+</div>  
+</div>
+<!--footer-->
+<footer>
+  <div class="footer-container">
+    <div class="social-media">
+      <a href="http://facebook.com/balaga.vasanthkumar" class="icon"><i class="fa fa-facebook"></i></a>
+      <a href="http://teitter.com/vasanthkumar" class="icon"><i class="fa fa-twitter"></i></a>
+      <a href="http://instagram.com/heart_hacker___vasanthkumar" class="icon"><i class="fa fa-instagram"></i></a>
+      <a href="http://whatsapp.com/8977250701" class="icon"><i class="fa fa-whatsapp"></i></a>
+      <a href="http://telegram.com/Ram" class="icon"><i class="fa fa-telegram"></i></a>
+    </div>
+    <p>&copy; 2024 my Website. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>
